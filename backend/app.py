@@ -22,6 +22,8 @@ import urllib.parse
 import tempfile
 import re
 import secrets
+from dotenv import load_dotenv
+load_dotenv()
 
 
 # New imports for Word generation
@@ -69,7 +71,7 @@ except ImportError:
 # Flask & Database Init
 # ==============================
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'your_secret_key_here_change_in_production'  # Change this in production
+app.config['SECRET_KEY'] = os.getenv('FLASK_SECRET_KEY', 'dev-secret-key')
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///linkguard.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max file size
@@ -242,13 +244,13 @@ def extract_url_features_local(url: str) -> dict:
 # External Intelligence
 # ==============================
 # API Keys & Endpoints
-GSB_API_KEY = "AIzaSyBtY0X1ihmo5H8L17efEkwB-prig6_6CIA"
+GSB_API_KEY = os.getenv("GSB_API_KEY", "")
 SAFE_BROWSING_URL = f"https://safebrowsing.googleapis.com/v4/threatMatches:find?key={GSB_API_KEY}"
-VT_API_KEY = "2a9e59c1e4a4bc8929eb6cb4cffccb00b864115cc75a82ee0983a46f8e4d2ff8"
+VT_API_KEY = os.getenv("VT_API_KEY", "")
 VT_URL_SCAN = "https://www.virustotal.com/api/v3/urls"
 VT_HEADERS = {"x-apikey": VT_API_KEY}
 URLHAUS_URL = "https://urlhaus-api.abuse.ch/v1/url/"
-URLHAUS_AUTH_KEY = "03d45050c56db9ec30401d6ed89285293b349de99c27304f"
+URLHAUS_AUTH_KEY = os.getenv("URLHAUS_AUTH_KEY", "")
 
 # Create a session with SSL verification disabled for URLhaus
 session = requests.Session()
