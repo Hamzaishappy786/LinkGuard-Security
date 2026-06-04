@@ -1,4 +1,4 @@
-# 🛡️ LinkGuard — Phishing URL Detection System
+# 🛡️ LinkGuard - Phishing URL Detection System
 
 > AI-powered phishing detection with real-time URL analysis, quishing (QR phishing), homograph attacks, and an AI Analyst chatbot.
 
@@ -10,7 +10,7 @@ Don't worry, it's easier than it looks. Follow these steps **in order** and you'
 
 ---
 
-### Step 1 — Clone the Repo 📥
+### Step 1 - Clone the Repo 📥
 
 ```bash
 git clone https://github.com/Hamzaishappy786/LinkGuard-Security.git
@@ -20,17 +20,17 @@ Then open the cloned folder.
 
 ---
 
-### Step 2 — Set Up the Secret Keys 🔑
+### Step 2 - Set Up the Secret Keys 🔑
 
 Inside the `backend/` folder, you'll find a file called `.env.example`.
 
 Make a **copy** of it, rename the copy to `.env` (no `.example`), and fill in your API keys.
 
-> It already has the working keys inside `.env.example` — just copy, rename, done. ✅
+> It already has the working keys inside `.env.example` - just copy, rename, done. ✅
 
 ---
 
-### Step 3 — Install Python Dependencies 🐍
+### Step 3 - Install Python Dependencies 🐍
 
 Open a terminal **inside the project folder** and run:
 
@@ -38,11 +38,11 @@ Open a terminal **inside the project folder** and run:
 pip install -r backend/requirements.txt
 ```
 
-Grab a coffee ☕ — this one takes a minute.
+Grab a coffee ☕ - this one takes a minute.
 
 ---
 
-### Step 4 — Install Frontend Dependencies 🌐
+### Step 4 - Install Frontend Dependencies 🌐
 
 Still in the same terminal, run:
 
@@ -55,7 +55,7 @@ Another short wait... 🥁
 
 ---
 
-### Step 5 — Launch the App 🎉
+### Step 5 - Launch the App 🎉
 
 Go back to the main project folder and double-click:
 
@@ -115,4 +115,4 @@ LinkGuard/
 
 ---
 
-*Built with 💙 as a Final Year Project — LinkGuard Security*
+*Built with 💙 as a Final Year Project - LinkGuard Security*
