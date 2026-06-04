@@ -1,0 +1,46 @@
+# Python
+backend/venv/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Datasets - not uploaded
+backend/datasets/
+backend/phishing.csv
+backend/features_extracted.csv
+*.csv
+
+# Database (runtime data)
+backend/instance/linkguard.db
+*.db
+*.sqlite3
+
+# Credentials - never commit
+backend/serviceAccountKey.json
+.env
+*.env
+.env.*
+.env.local
+.env.production
+
+# Node.js
+node_modules/
+
+# Build output
+fyp-frontend/dist/
+dist/
+dist-ssr/
+
+# Logs
+*.log
+backend/logs/*.log
+
+# Editor
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Claude
+.claude/
