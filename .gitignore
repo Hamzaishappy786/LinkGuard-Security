@@ -18,6 +18,7 @@ backend/instance/linkguard.db
 
 # Credentials - never commit
 backend/serviceAccountKey.json
+backend/.env
 .env
 *.env
 .env.*
