@@ -25,6 +25,10 @@ backend/.env
 .env.local
 .env.production
 
+# Allow example env files
+!.env.example
+!**/.env.example
+
 # Node.js
 node_modules/
 
